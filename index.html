@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Proposal Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Client Proposal Builder</h1>
+    
+    <form id="proposal-form">
+      <label>Client Name:
+        <input type="text" id="client-name" required />
+      </label>
+      <label>Company:
+        <input type="text" id="client-company" required />
+      </label>
+      <label>Services:
+        <textarea id="services" required></textarea>
+      </label>
+      <label>Pricing:
+        <textarea id="pricing" required></textarea>
+      </label>
+      <label>Terms:
+        <textarea id="terms" required></textarea>
+      </label>
+      <button type="submit">Generate Proposal</button>
+    </form>
+
+    <hr>
+
+    <div id="proposal-preview">
+      <h2>Proposal Preview</h2>
+      <div id="proposal-content"></div>
+      <button id="download-btn">Download PDF</button>
+    </div>
+  </div>
+
+  <script src="html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
